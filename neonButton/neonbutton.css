@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    flex-direction: column;
+    background: #050801;
+}
+.calc{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 15px;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 2px;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(245, 13, 13, 0.333));
+    
+}
+.calc:nth-child(1){
+    filter: hue-rotate(290deg);
+}
+.calc:hover{
+    background: #48a800;
+    color: #fbfbfb;
+    box-shadow: 
+                0 0 5px #f40303, 
+                0 0 25px #d903c3, 
+                0 0 50px #d903c3, 
+                0 0 200px #f40303;
+}
+.calc span{
+    position: absolute;
+    display: block;
+}
+.calc span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#db1515);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.calc span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#db1515);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.calc span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#db1515);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+.calc span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#db1515);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
